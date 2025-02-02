@@ -6,11 +6,17 @@ TestNG – for test execution and reporting
 Maven – for dependency management and build automation
 
 Features:
+
 ✅ Modular & Scalable Design
+
 ✅ Page Object Model (POM) for UI Tests
+
 ✅ API Testing with RestAssured
+
 ✅ Parallel Execution Support
+
 ✅ Extent Reports for Detailed Test Reports
+
 ✅ Maven-based Build & Dependency Management
 
 Usage:
