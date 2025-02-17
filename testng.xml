@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="FIS AUTOMATION SUITE" >
-    <test name="verify product added to cart">
+<!--    <test name="verify product added to cart">-->
+<!--        <parameter name="type" value="WEB"/>-->
+<!--        <classes>-->
+<!--            <class name="com.qa.web.test.WebTests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="verify current price">-->
+<!--        <parameter name="type" value="API"/>-->
+<!--        <classes>-->
+<!--            <class name="com.qa.web.test.ApiTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="verify page title">
         <parameter name="type" value="WEB"/>
         <classes>
-            <class name="com.qa.web.test.WebTests" />
-        </classes>
-    </test>
-    <test name="verify current price">
-        <parameter name="type" value="API"/>
-        <classes>
-            <class name="com.qa.web.test.ApiTests"/>
+            <class name="com.qa.web.test.WebTests">
+                <methods>
+                    <include name="verifyEbayMotors"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

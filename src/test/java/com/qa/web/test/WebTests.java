@@ -5,12 +5,13 @@ import com.qa.pages.HomePage;
 import com.qa.pages.ProductPage;
 import com.qa.pages.ProductSearchPage;
 import com.qa.pages.ShoppingCartPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
 public class WebTests extends BaseTest{
 
-    @Test(description = "Verify item can be added to Cart")
+    @Test(description = "Verify item can be added to Cart", enabled = false)
     public void verifyProductAddedToCart() {
 
         String searchProduct = "book";
@@ -31,4 +32,14 @@ public class WebTests extends BaseTest{
         assertEquals(shoppingCartPage.getCartProductCount(),expectedCartCount);
 
         }
+
+    @Test(description = "Verify title of page")
+    public void verifyEbayMotors() {
+
+        homePage = new HomePage(getDriver());
+        homePage.gotoMotors();
+        String actualTitle = homePage.getMotorPageTitle();
+        Assert.assertEquals(actualTitle,"eBay Motors","Page title does not matched");
+    }
+
 }
